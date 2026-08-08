@@ -11,75 +11,196 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="hero">
-      <nav class="nav">
+    <header class="hero" id="home">
+      <nav class="nav" id="nav">
         <a href="#home" class="brand">Sharmila</a>
         <div class="nav-links">
           <a href="#about">About</a>
+          <a href="#services">Services</a>
           <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
         </div>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
       </nav>
 
-      <div class="hero-content" id="home">
-        <p class="eyebrow">Freelance Web Developer</p>
-        <h1>Designing modern websites that feel effortless.</h1>
-        <p class="hero-text">
+      <div class="hero-content">
+        <p class="eyebrow reveal">Freelance Web Developer</p>
+        <h1 class="reveal">Designing modern websites that feel effortless.</h1>
+        <p class="hero-text reveal">
           I build clean, responsive, and user-focused web experiences for startups,
           creatives, and growing brands.
         </p>
-        <a class="button" href="#projects">View My Work</a>
+        <div class="hero-actions reveal">
+          <a class="button" href="#projects">View My Work</a>
+          <a class="button secondary" href="#contact">Get in Touch</a>
+        </div>
       </div>
+
+      <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+        <span></span>
+      </a>
     </header>
 
     <main>
       <section class="section" id="about">
-        <div class="section-heading">
+        <div class="section-heading reveal">
           <p class="eyebrow">About Me</p>
           <h2>Thoughtful code, polished experiences.</h2>
         </div>
-        <p>
-          I specialize in turning ideas into practical websites using modern frontend
-          tools. My focus is on clarity, accessibility, and a smooth experience from
-          first click to final conversion.
-        </p>
+        <div class="about-grid">
+          <p class="reveal">
+            I specialize in turning ideas into practical websites using modern frontend
+            tools. My focus is on clarity, accessibility, and a smooth experience from
+            first click to final conversion.
+          </p>
+          <div class="stats">
+            <div class="stat reveal">
+              <span class="stat-number" data-target="50">0</span>
+              <span class="stat-label">Projects Delivered</span>
+            </div>
+            <div class="stat reveal">
+              <span class="stat-number" data-target="5">0</span>
+              <span class="stat-label">Years Experience</span>
+            </div>
+            <div class="stat reveal">
+              <span class="stat-number" data-target="100" data-suffix="%">0</span>
+              <span class="stat-label">Client Satisfaction</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="services">
+        <div class="section-heading reveal">
+          <p class="eyebrow">What I Do</p>
+          <h2>Services built to grow your brand.</h2>
+        </div>
+        <div class="card-grid">
+          <article class="card reveal">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <h3>Web Development</h3>
+            <p>Hand-crafted, performant websites built with modern tools and best practices.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h3>Responsive Design</h3>
+            <p>Flawless experiences across every device, from phones to desktops and beyond.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <h3>SEO &amp; Performance</h3>
+            <p>Optimized for speed and search rankings so your audience finds you faster.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg>
+            </div>
+            <h3>UI/UX Design</h3>
+            <p>Intuitive interfaces designed around your users' needs and your brand identity.</p>
+          </article>
+        </div>
       </section>
 
       <section class="section" id="projects">
-        <div class="section-heading">
+        <div class="section-heading reveal">
           <p class="eyebrow">Featured Projects</p>
           <h2>Selected work.</h2>
         </div>
         <div class="card-grid">
-          <article class="card">
-            <h3>Studio Landing Page</h3>
-            <p>Elegant one-page experience for a creative brand with strong storytelling.</p>
+          <article class="card project-card reveal">
+            <div class="project-image" style="background: linear-gradient(135deg, #1a2b50, #2d4a8a);">
+              <span class="project-tag">Landing Page</span>
+            </div>
+            <div class="project-body">
+              <h3>Studio Landing Page</h3>
+              <p>Elegant one-page experience for a creative brand with strong storytelling.</p>
+            </div>
           </article>
-          <article class="card">
-            <h3>Product Showcase</h3>
-            <p>Responsive product site with clear calls to action and conversion-focused layout.</p>
+          <article class="card project-card reveal">
+            <div class="project-image" style="background: linear-gradient(135deg, #0d3b3a, #1a6b66);">
+              <span class="project-tag">Product Site</span>
+            </div>
+            <div class="project-body">
+              <h3>Product Showcase</h3>
+              <p>Responsive product site with clear calls to action and conversion-focused layout.</p>
+            </div>
           </article>
-          <article class="card">
-            <h3>Personal Portfolio</h3>
-            <p>Minimal and modern portfolio that highlights work, services, and contact details.</p>
+          <article class="card project-card reveal">
+            <div class="project-image" style="background: linear-gradient(135deg, #2a1b4d, #4d2f8e);">
+              <span class="project-tag">Portfolio</span>
+            </div>
+            <div class="project-body">
+              <h3>Personal Portfolio</h3>
+              <p>Minimal and modern portfolio that highlights work, services, and contact details.</p>
+            </div>
           </article>
         </div>
       </section>
 
       <section class="section contact" id="contact">
-        <div class="section-heading">
-          <p class="eyebrow">Let’s Connect</p>
+        <div class="section-heading reveal">
+          <p class="eyebrow">Let's Connect</p>
           <h2>Ready to build something meaningful?</h2>
         </div>
-        <a class="button secondary" href="mailto:hello@sharmila.dev">hello@sharmila.dev</a>
+        <form class="contact-form reveal" id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-field">
+              <input type="text" id="name" name="name" required placeholder=" " />
+              <label for="name">Your Name</label>
+            </div>
+            <div class="form-field">
+              <input type="email" id="email" name="email" required placeholder=" " />
+              <label for="email">Email Address</label>
+            </div>
+          </div>
+          <div class="form-field">
+            <textarea id="message" name="message" rows="4" required placeholder=" "></textarea>
+            <label for="message">Tell me about your project</label>
+          </div>
+          <button type="submit" class="button">Send Message</button>
+          <p class="form-status" id="formStatus"></p>
+        </form>
       </section>
     </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <a href="#home" class="brand">Sharmila</a>
+        <div class="social-links">
+          <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.9 1.2 1.9 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.6.2 2.9.1 3.2.8.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"/></svg>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2zM8 19H5v-9h3zM6.5 8.3a1.7 1.7 0 1 1 0-3.5 1.7 1.7 0 0 1 0 3.5zM19 19h-3v-4.7c0-1.1 0-2.5-1.5-2.5S13 13 13 14.2V19h-3v-9h2.9v1.2a3.2 3.2 0 0 1 2.9-1.6c3.1 0 3.7 2 3.7 4.7z"/></svg>
+          </a>
+          <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M22.5 6.3a8.2 8.2 0 0 1-2.4.7 4.2 4.2 0 0 0 1.8-2.3 8.4 8.4 0 0 1-2.6 1 4.2 4.2 0 0 0-7.1 3.8A11.8 11.8 0 0 1 3.2 4.6a4.2 4.2 0 0 0 1.3 5.6 4.2 4.2 0 0 1-1.9-.5v.1a4.2 4.2 0 0 0 3.3 4.1 4.2 4.2 0 0 1-1.9.1 4.2 4.2 0 0 0 3.9 2.9A8.4 8.4 0 0 1 2 18.6a11.8 11.8 0 0 0 6.4 1.9c7.7 0 11.9-6.4 11.9-11.9v-.5a8.5 8.5 0 0 0 2.1-2.2z"/></svg>
+          </a>
+          <a href="mailto:hello@sharmila.dev" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+        </div>
+        <p class="footer-text">© 2026 Sharmila. Crafted with care.</p>
+      </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+    </button>
 
     <script src="script.js"></script>
   </body>
