@@ -1,0 +1,7 @@
+# robots.txt — Lumora Studio
+# TODO_ADD_DOMAIN — replace with your real domain
+
+User-agent: *
+Allow: /
+
+Sitemap: https://lumora-studio.vercel.app/sitemap.xml

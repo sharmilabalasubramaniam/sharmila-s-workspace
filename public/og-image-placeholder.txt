@@ -1,0 +1,12 @@
+# Social preview image placeholder
+
+This file marks where a social preview image (og-image.png, 1200x630px) should be placed.
+
+TODO_ADD_OG_IMAGE — Create a 1200x630px image with:
+- Lumora Studio branding
+- Dark background (#0B0F19)
+- Accent colors (#7C6CF6, #38BDF8)
+- "Lumora Studio" text
+- "Build modern websites and intelligent digital solutions" tagline
+
+Save it as `og-image.png` in this folder to replace this placeholder.
